@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual Environment
+.env
+.venv
+env/
+venv/
+ENV/
+cr/
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data — never commit raw data
+data/raw/
+data/processed/
+*.csv
+*.zip
+*.parquet
+*.db
+*.sqlite
+
+# Models
+models/*.pkl
+models/*.joblib
+models/*.json
+models/*.txt
+
+# SHAP / output artifacts
+outputs/
+reports/figures/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+logs/
