@@ -33,16 +33,16 @@ cr/
 
 # Data — never commit raw data
 data/raw/
-data/processed/
-*.csv
+# data/processed/
+# *.csv
 *.zip
 *.parquet
-*.db
+# *.db
 *.sqlite
 
 # Models
-models/*.pkl
-models/*.joblib
+# models/*.pkl
+# models/*.joblib
 models/*.json
 models/*.txt
 

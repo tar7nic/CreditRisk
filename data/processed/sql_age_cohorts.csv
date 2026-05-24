@@ -1,0 +1,5 @@
+age_group,applicants,defaults,default_rate_pct,avg_income
+1_Young (<30),45000,5155,11.46,157930.06
+2_Adult (30-40),82299,7885,9.58,174693.82
+3_Mid-Age (40-55),111485,8201,7.36,174535.65
+4_Senior (55+),68727,3584,5.21,147329.15
