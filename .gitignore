@@ -48,7 +48,7 @@ models/*.txt
 
 # SHAP / output artifacts
 outputs/
-reports/figures/
+# reports/figures/
 
 # OS
 .DS_Store

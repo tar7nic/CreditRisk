@@ -1,0 +1,92 @@
+{
+  "name": "CreditRisk Insights",
+  "dataColors": [
+    "#1565C0",
+    "#C62828",
+    "#2E7D32",
+    "#F57F17",
+    "#6A1B9A",
+    "#00838F",
+    "#AD1457",
+    "#4E342E"
+  ],
+  "background": "#F0F4F8",
+  "foreground": "#1A1A2E",
+  "tableAccent": "#1565C0",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } } }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#E0E6EF" } }, "radius": 8 }],
+        "shadow": [{ "show": true }],
+        "title": [{
+          "show": true,
+          "fontColor": { "solid": { "color": "#1A1A2E" } },
+          "background": { "solid": { "color": "#FFFFFF" } },
+          "fontSize": 13,
+          "fontFamily": "Segoe UI"
+        }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{ "fontSize": 28, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#1565C0" } } }],
+        "label": [{ "fontSize": 11, "fontColor": { "solid": { "color": "#666666" } }, "fontFamily": "Segoe UI" }],
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } } }]
+      }
+    },
+    "columnChart": {
+      "*": {
+        "dataPoint": [{ "defaultColor": { "solid": { "color": "#1565C0" } } }],
+        "categoryAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#444444" } } }],
+        "valueAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#444444" } } }],
+        "dataLabels": [{ "show": true, "fontSize": 10, "fontFamily": "Segoe UI" }]
+      }
+    },
+    "barChart": {
+      "*": {
+        "dataPoint": [{ "defaultColor": { "solid": { "color": "#1565C0" } } }],
+        "categoryAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#444444" } } }],
+        "valueAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#444444" } } }],
+        "dataLabels": [{ "show": true, "fontSize": 10, "fontFamily": "Segoe UI" }]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [{ "strokeWidth": 3 }],
+        "markers": [{ "show": true, "size": 6 }],
+        "categoryAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI" }],
+        "valueAxis": [{ "fontSize": 11, "fontFamily": "Segoe UI" }]
+      }
+    },
+    "donutChart": {
+      "*": {
+        "dataLabels": [{ "show": true, "fontSize": 11, "fontFamily": "Segoe UI" }],
+        "legend": [{ "show": true, "fontSize": 11, "fontFamily": "Segoe UI", "fontColor": { "solid": { "color": "#1A1A2E" } } }]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "header": [{
+          "fontColor": { "solid": { "color": "#FFFFFF" } },
+          "backColor": { "solid": { "color": "#1565C0" } },
+          "fontSize": 12,
+          "fontFamily": "Segoe UI"
+        }],
+        "rows": [{
+          "fontColor": { "solid": { "color": "#1A1A2E" } },
+          "backColor": { "solid": { "color": "#FFFFFF" } },
+          "altBackColor": { "solid": { "color": "#F0F4F8" } },
+          "fontSize": 11,
+          "fontFamily": "Segoe UI"
+        }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "data": [{ "fontColor": { "solid": { "color": "#1A1A2E" } }, "fontSize": 11, "fontFamily": "Segoe UI" }],
+        "selection": [{ "selectAllCheckboxEnabled": true }]
+      }
+    }
+  }
+}
