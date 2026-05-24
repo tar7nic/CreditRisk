@@ -33,22 +33,6 @@ cr/
 
 # Data — never commit raw data
 data/raw/
-# data/processed/
-# *.csv
-*.zip
-*.parquet
-# *.db
-*.sqlite
-
-# Models
-# models/*.pkl
-# models/*.joblib
-models/*.json
-models/*.txt
-
-# SHAP / output artifacts
-# outputs/
-# reports/figures/
 
 # OS
 .DS_Store
