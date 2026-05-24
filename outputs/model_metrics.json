@@ -1,0 +1,42 @@
+[
+  {
+    "name": "LogisticRegression",
+    "threshold": 0.2621,
+    "ROC-AUC": 0.6767,
+    "F1": 0.2362,
+    "Precision": 0.1674,
+    "Recall": 0.4008
+  },
+  {
+    "name": "DecisionTree",
+    "threshold": 0.2878,
+    "ROC-AUC": 0.6759,
+    "F1": 0.2433,
+    "Precision": 0.1713,
+    "Recall": 0.4193
+  },
+  {
+    "name": "RandomForest",
+    "threshold": 0.2902,
+    "ROC-AUC": 0.7054,
+    "F1": 0.2551,
+    "Precision": 0.1803,
+    "Recall": 0.4365
+  },
+  {
+    "name": "XGBoost",
+    "threshold": 0.689,
+    "ROC-AUC": 0.7494,
+    "F1": 0.2934,
+    "Precision": 0.2213,
+    "Recall": 0.435
+  },
+  {
+    "name": "LightGBM",
+    "threshold": 0.6862,
+    "ROC-AUC": 0.7504,
+    "F1": 0.2953,
+    "Precision": 0.2246,
+    "Recall": 0.431
+  }
+]

@@ -47,7 +47,7 @@ models/*.json
 models/*.txt
 
 # SHAP / output artifacts
-outputs/
+# outputs/
 # reports/figures/
 
 # OS
