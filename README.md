@@ -108,6 +108,7 @@ CreditRisk/
 ---
 
 ## 🔁 Pipeline Walkthrough
+```
 Raw CSV (307K rows)
 ↓
 Data Cleaning       → missing values, anomaly fix, winsorization, encoding
@@ -123,7 +124,7 @@ Model Training      → 5 models, SMOTE, Stratified K-Fold CV, threshold tuning
 SHAP Explainability → summary plot, bar plot, feature ranking
 ↓
 Deployment          → Streamlit Cloud + Power BI Dashboard
-
+```
 ---
 
 ## 📈 Model Performance
