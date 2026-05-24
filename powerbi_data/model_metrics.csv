@@ -1,0 +1,6 @@
+name,threshold,ROC-AUC,F1,Precision,Recall,sort_order
+LogisticRegression,0.2621,0.6767,0.2362,0.1674,0.4008,1
+DecisionTree,0.2878,0.6759,0.2433,0.1713,0.4193,2
+RandomForest,0.2902,0.7054,0.2551,0.1803,0.4365,3
+XGBoost,0.689,0.7494,0.2934,0.2213,0.435,4
+LightGBM,0.6862,0.7504,0.2953,0.2246,0.431,5

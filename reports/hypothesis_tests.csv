@@ -1,0 +1,13 @@
+Feature,Test,Statistic,P-Value,Significant,Interpretation
+DAYS_BIRTH,Independent t-test,-44.9811,0.0,✅ Yes,Defaulters mean=14887.12 vs Non-defaulters mean=16137.18
+EXT_SOURCE_3,Independent t-test,-80.0629,0.0,✅ Yes,Defaulters mean=0.42 vs Non-defaulters mean=0.52
+EXT_SOURCE_2,Independent t-test,-80.4384,0.0,✅ Yes,Defaulters mean=0.41 vs Non-defaulters mean=0.52
+DAYS_EMPLOYED,Independent t-test,-42.007,0.0,✅ Yes,Defaulters mean=1790.48 vs Non-defaulters mean=2274.68
+NAME_INCOME_TYPE,Chi-square,1253.4708,1.9281456056861122e-266,✅ Yes,dof=7
+NAME_EDUCATION_TYPE,Chi-square,1019.2132,2.4476812052198174e-219,✅ Yes,dof=4
+CODE_GENDER,Chi-square,920.7913,1.1290217848908289e-200,✅ Yes,dof=2
+AMT_CREDIT,Independent t-test,-18.9173,2.301624607123407e-79,✅ Yes,Defaulters mean=556578.80 vs Non-defaulters mean=599794.77
+NAME_CONTRACT_TYPE,Chi-square,293.1505,1.0235150721172847e-65,✅ Yes,dof=1
+AMT_INCOME_TOTAL,Independent t-test,-13.9599,3.750435725528049e-44,✅ Yes,Defaulters mean=159538.02 vs Non-defaulters mean=166640.89
+FLAG_OWN_CAR,Chi-square,146.656,9.330994431109667e-34,✅ Yes,dof=1
+AMT_ANNUITY,Independent t-test,-6.8116,9.829213471596479e-12,✅ Yes,Defaulters mean=26434.49 vs Non-defaulters mean=26990.06

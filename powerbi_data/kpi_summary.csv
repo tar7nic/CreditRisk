@@ -1,0 +1,7 @@
+KPI,Value,sort_order
+Total Applications,307511.0,1
+Total Defaults,24825.0,2
+Default Rate Pct,8.07,3
+Avg Annual Income,166067.0,4
+Avg Loan Amount,596306.0,5
+Best Model AUC,0.7504,6
