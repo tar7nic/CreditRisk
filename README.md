@@ -95,8 +95,8 @@ CreditRisk/
 │   ├── eda.py                  ← EDA + hypothesis testing
 │   ├── database.py             ← SQLite storage + SQL cohort queries
 │   ├── feature_engineering.py  ← 25+ engineered features
-│   ├── train.py       ← 5 models + CV + threshold tuning
-│   └── shapEx.py       ← SHAP analysis + plots
+│   ├── train.py                ← 5 models + CV + threshold tuning
+│   └── shapEx.py               ← SHAP analysis + plots
 │
 ├── app.py                      ← Streamlit dashboard
 ├── runner.py                   ← Full pipeline entry point
