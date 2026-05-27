@@ -11,7 +11,7 @@
 > Covers the full data science lifecycle — ingestion, EDA, SQL analytics, feature engineering,  
 > ML modeling, SHAP explainability, and interactive deployment.
 
-**[🚀 Live Streamlit App](https://creditrisk-tn019.streamlit.app/)** &nbsp;|&nbsp; **[📊 View Power BI Dashboard](./dashboard.pdf)**
+**[🚀 Live Streamlit App](https://creditrisk-tn019.streamlit.app/)** &nbsp;|&nbsp; **[📊 View Power BI Dashboard](./creditrisk_dash.pdf)**
 
 ---
 
@@ -102,6 +102,7 @@ CreditRisk/
 ├── runner.py                   ← Full pipeline entry point
 ├── dashboard.pdf               ← Power BI dashboard export
 ├── requirements.txt
+├── powerbi_export.py           ← Exporting clean data for PowerBI dashboard
 └── README.md
 ```
 
@@ -200,7 +201,7 @@ Four interactive tabs:
 
 ## 📊 Power BI Dashboard
 
-**[📥 View Dashboard PDF](./dashboard.pdf)**
+**[📥 View Dashboard PDF](./creditrisk_dash.pdf)**
 
 Three-page executive dashboard built in Power BI Desktop:
 
