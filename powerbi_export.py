@@ -67,10 +67,13 @@ df_pbi['CREDIT_BRACKET'] = pd.cut(
     labels=['Under 200K', '200K to 500K', '500K to 1M', 'Over 1M']
 ).astype(str)
 
+# Use quantile-based bins so each tier has meaningful representation
+risk_bins = df_pbi['COMPOSITE_RISK_SCORE'].quantile([0, 0.25, 0.50, 0.75, 1.0]).values
 df_pbi['RISK_TIER'] = pd.cut(
-    df_pbi['COMPOSITE_RISK_SCORE'],
-    bins=[0, 0.25, 0.50, 0.75, 1.01],
-    labels=['Low', 'Medium', 'High', 'Critical']
+    df_pbi['EXT_SOURCE_MEAN'],
+    bins=[0, 0.426, 0.532, 0.615, 1.01],
+    labels=['Critical', 'High', 'Medium', 'Low'],
+    include_lowest=True
 ).astype(str)
 
 df_pbi['DTI_BAND'] = pd.cut(
@@ -94,11 +97,12 @@ print(f"  applications.csv → {len(df_pbi):,} rows, {df_pbi.shape[1]} cols")
 print("Exporting income_cohorts.csv...")
 inc = pd.read_csv(os.path.join(DATA_PROCESSED, 'sql_income_cohorts.csv'))
 inc['income_bracket'] = inc['income_bracket'].replace({
-    '1_Low (<90K)'       : 'Low',
-    '2_Mid (90K-180K)'   : 'Mid',
-    '3_High (180K-360K)' : 'High',
-    '4_Very High (>360K)': 'Very High',
+    '1_Low (<90K)'       : 'Low (<90K)',
+    '2_Mid (90K-180K)'   : 'Mid (90K-180K)',
+    '3_High (180K-360K)' : 'High (180K-360K)',
+    '4_Very High (>360K)': 'Very High (>360K)',
 })
+sort_inc = {'Low (<90K)': 1, 'Mid (90K-180K)': 2, 'High (180K-360K)': 3, 'Very High (>360K)': 4}
 sort_inc = {'Low': 1, 'Mid': 2, 'High': 3, 'Very High': 4}
 inc = clean_cohort(
     inc, 'income_bracket',
@@ -114,11 +118,12 @@ print(inc.to_string(index=False))
 print("Exporting age_cohorts.csv...")
 age = pd.read_csv(os.path.join(DATA_PROCESSED, 'sql_age_cohorts.csv'))
 age['age_group'] = age['age_group'].replace({
-    '1_Young (<30)' : 'Under 30',
-    '2_Adult (30-40)': '30 to 40',
-    '3_Mid-Age (40-55)': '40 to 55',
-    '4_Senior (55+)': 'Over 55',
+    '1_Young (<30)'    : 'Young (<30)',
+    '2_Adult (30-40)'  : 'Adult (30-40)',
+    '3_Mid-Age (40-55)': 'Mid-Age (40-55)',
+    '4_Senior (55+)'   : 'Senior (55+)',
 })
+sort_age = {'Young (<30)': 1, 'Adult (30-40)': 2, 'Mid-Age (40-55)': 3, 'Senior (55+)': 4}
 sort_age = {'Under 30': 1, '30 to 40': 2, '40 to 55': 3, 'Over 55': 4}
 age = clean_cohort(
     age, 'age_group',
@@ -134,11 +139,16 @@ print(age.to_string(index=False))
 print("Exporting credit_stress.csv...")
 cs = pd.read_csv(os.path.join(DATA_PROCESSED, 'sql_credit_stress_ratio.csv'))
 cs['annuity_income_ratio'] = cs['annuity_income_ratio'].replace({
-    '1_Low Stress (<10%)' : 'Low Stress',
-    '2_Moderate (10-20%)' : 'Moderate',
-    '3_High (20-35%)'     : 'High',
-    '4_Very High (>35%)'  : 'Very High',
+    '1_Low Stress (<10%)' : 'Low (<10%)',
+    '2_Moderate (10-20%)' : 'Moderate (10-20%)',
+    '3_High (20-35%)'     : 'High (20-35%)',
+    '4_Very High (>35%)'  : 'Very High (>35%)',
 })
+sort_cs = {'Low (<10%)': 1, 'Moderate (10-20%)': 2, 'High (20-35%)': 3, 'Very High (>35%)': 4}
+
+import pandas as pd
+df = pd.read_csv('powerbi_data/income_cohorts.csv')
+print(df[['income_bracket','default_rate_pct']])
 sort_cs = {'Low Stress': 1, 'Moderate': 2, 'High': 3, 'Very High': 4}
 cs = clean_cohort(
     cs, 'annuity_income_ratio',
